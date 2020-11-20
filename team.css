@@ -64,7 +64,6 @@ body {
 }
 
 .logo {
-  
   justify-self: center;
   width: 250px;
   position: relative;
@@ -147,56 +146,34 @@ outline: none;
   box-sizing: border-box;
 }
 
-.leadership:hover{
-  background-color: rgb(241, 241, 241);
-  border-width: .1px;
-}
-
-
-.premier:hover{
-  background-color: rgb(241, 241, 241);
-  border-width: .1px;
-}
-
-.team-2:hover{
-  background-color: rgb(241, 241, 241);
-  border-width: .1px;
-}
-
-.team-1:hover{
-  background-color: rgb(241, 241, 241);
-  border-width: .1px;
-}
-
-.operations:hover{
-  background-color: rgb(241, 241, 241);
-  border-width: .1px;
-}
-
-.leadership:visited{
-  filter: invert(1);
-  border-width: .1px;
-}
-
-.premier:visited{
-  filter: invert(1);
-  border-width: .1px;
-}
-
-.team-2:visited{
+a {
+  text-decoration: inherit;
   color: inherit;
-  filter: invert(1);
+}
+
+.primaryColorbg {
+  display: grid;
+  align-self: center;
+  border-radius: .4rem;
+  margin: 5px 10px;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  font-style: normal;
+  color: #f5f5f5;
+  background-color: #03213c;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.leadership:hover, .premier:hover, .team-1:hover, .team-2:hover, .operations:hover{
+  background-color: rgb(241, 241, 241);
   border-width: .1px;
 }
 
-.team-1:visited{
-  color: inherit;
-  filter: invert(1);
-  border-width: .1px;
-}
-
-.operations:visited{
-  color: inherit;
+.leadership:active, .premier:active, .team-2:active, .team-1:active, .operations:active{
   filter: invert(1);
   border-width: .1px;
 }
