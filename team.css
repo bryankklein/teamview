@@ -12,20 +12,13 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  display: grid;
-  grid-template-columns: 217px 1fr;
-  grid-template-rows: 70px 1fr;
-  grid-template-areas: 
-  "header header"
-  "navbar section";
-  height: 100vh;
+  height: 100%;
   line-height: 20px;
   margin: 0;
-  min-width: 320px;
   padding: 0;
   text-size-adjust: 100%;
-  overflow-y: auto;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  overflow-y: hidden;
 }
 
 .header {
@@ -33,10 +26,8 @@ body {
   box-shadow:0 2px 2px rgba(0,0,0,0.05), 0 1px 0 rgba(0,0,0,.05);
   box-sizing: border-box;
   color: rgb(102, 125, 136);
-  grid-area: header;
-  display: grid;
-  grid-template-columns:33px 125px 1fr 105px 166px;
-  grid-template-rows: 50px;
+  display: flex;
+  flex-flow: row wrap;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-style: normal;
@@ -44,30 +35,69 @@ body {
   height: 70px;
   letter-spacing: 2px;
   line-height: 50px;
-  max-height: 70px;
-  min-height: 70px;
   width: 100%;
   padding: 10px 15px 10px 15px;
   text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.sidebarcontainer {
+  -webkit-box-flex: 1;
+  height: 100%;
+  display: flex;
+  flex: 1 0;
+  justify-content: flex-start;
+  margin-right: auto;
+  max-width: 150px;
 }
 
 .teamicon {
   height: 25px;
   width: 25px;
-  padding: 5px 5px 0 0;
+  margin-bottom: 10px;
+  justify-self: center;
 }
 
 .teamview {
- padding: 0 0 0 5px;
+ margin-right: 10px;
+ justify-self: center;
+}
+
+.sidebarcollapse {
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 40px 110px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: .9rem;
+  font-style: normal;
+  color: #667d88;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.bdheader {
+  height: 100%;
+  display: flex;
+  flex: 1 0;
+  justify-content: flex-end;
+  margin-left: auto;
+  max-width: 300px;
 }
 
 .logo {
-  justify-self: center;
-  width: 250px;
-  position: relative;
+  display: block;
+  flex: 1 0;
+  text-align: center;
 }
+
 
 .menu {
 align-self: center;
@@ -77,11 +107,9 @@ border-width: 1px;
 border-style: solid;
 box-sizing: border-box;
 cursor: pointer;
-height: 35px;
 text-size-adjust: 100%;
 text-transform: uppercase;
 font-size: 12px;
-padding: 0 12px, 12px, 0px;
 background-color: rgb(255, 255, 255);
 outline: none;
 }
@@ -92,22 +120,31 @@ outline: none;
 }
 
 #menustuff {
-  display: grid;
-  grid-template-columns: 25px 50px;
+  display: flex;
+  flex-flow: nowrap;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
   
 }
 .menu-padding{
-  padding-top: 3px;
+  padding: 3px 0px 0px 5px;
 }
 .menu-icon{
   padding-left: 5px;
 }
 .nav-icons {
   height: 52px;
-  width: 162px;
+  width: 190px;
   margin-left: 10px;
+  justify-content: flex-end;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  
 }
 
 /* Side Navbar */
@@ -121,12 +158,13 @@ outline: none;
   grid-row: 2/3;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
-  position: relative;
-  height: 100vh;
-  padding: 15px 10px 5px 10px;
+    height: 100vh;
+  padding: 20px 10px 5px 10px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05);
   border-right: .1rem solid rgba(0,0,0,.1);
   margin-bottom: .8rem;
+  position: relative;
+  z-index: 1;
 }
 
 .leadership,.premier, .team-2, .team-1, .operations{
@@ -186,21 +224,23 @@ a {
 
 #bd-cards-container {
   width: 100%;
-  height: 100%;
-  padding: 2rem 2rem 2rem;
+  height: 100vh;
+  padding: 2rem;
   color: #00273b;
-  display: grid;
-  grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 20px;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
   box-sizing: border-box;
   transition: all 1s;
+  overflow-y: scroll;
 }
 
 
 .team-member {
   height: 450px;
-  width: 350px;
+  max-width: 350px;
+  min-width: 350px;
+  margin: 20px;
   border: .1rem solid rgba(0,0,0,.1);
   background-color: #fff;
   box-shadow: 0.1rem 0.1rem 0.6rem 0 rgba(1,2,2,.45);
@@ -233,7 +273,7 @@ a {
   padding: 0px 20px;
 }
 
-/* flip card */
+/* begin flip card */
 
  .flip-card-inner:hover {
   transform: rotateY(180deg);
