@@ -25,20 +25,16 @@ body {
   background-color: rgba(255, 255, 255);
   box-shadow:0 2px 2px rgba(0,0,0,0.05), 0 1px 0 rgba(0,0,0,.05);
   box-sizing: border-box;
-  color: rgb(102, 125, 136);
   display: flex;
   flex-flow: row wrap;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   font-style: normal;
-  font-weight: 600;
   height: 70px;
-  letter-spacing: 2px;
   line-height: 50px;
   width: 100%;
   padding: 10px 15px 10px 15px;
   text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
   overflow: hidden;
   position: relative;
   z-index: 2;
@@ -62,15 +58,20 @@ body {
 }
 
 .teamview {
- margin-right: 10px;
+ margin-right: px;
  justify-self: center;
+}
+
+.tv {
+  letter-spacing: .2rem;
+  font-weight: 600;
 }
 
 .sidebarcollapse {
   height: 100%;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 40px 110px;
+  grid-template-columns: 40px 120px;
   align-items: center;
   justify-content: center;
   background-color: rgb(255, 255, 255);
@@ -151,11 +152,12 @@ main {
 
 .nav-body {
   display: grid;
-  grid-template-columns: 200px;
+  grid-template-columns: 215px;
   grid-template-rows: 35px 35px 35px 35px 35px 1fr;
   grid-area: navbar;
   grid-column: 1/2;
   grid-row: 2/3;
+  grid-gap: 5px;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
     height: 100vh;
@@ -174,8 +176,8 @@ main {
   margin: 5px 10px;
   padding: .5rem 1rem;
   font-weight: 600;
-  font-size: 1rem;
-  font-style: normal;
+  font-size: 16px;
+  font-style: inherit;
   color: #667d88;
   background-color: rgb(255, 255, 255);
   border-style: none;
