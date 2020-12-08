@@ -239,9 +239,9 @@ a {
 
 
 .team-member {
-  height: 450px;
-  max-width: 350px;
-  min-width: 350px;
+  height: 500px;
+  max-width: 425px;
+  min-width: 400px;
   margin: 20px;
   border: .1rem solid rgba(0,0,0,.1);
   background-color: #fff;
