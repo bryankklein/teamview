@@ -82,6 +82,8 @@ body {
   cursor: pointer;
   border: none;
   outline: none;
+  transition: 0.5s;
+  overflow-x: hidden;
 }
 
 .bdheader {
@@ -145,6 +147,7 @@ main {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  transition: margin-left 0.5s;
   
 }
 
@@ -160,7 +163,7 @@ main {
   grid-gap: 5px;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
-    height: 100vh;
+  height: 100vh;
   padding: 20px 10px 5px 10px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.05);
   border-right: .1rem solid rgba(0,0,0,.1);

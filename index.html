@@ -11,7 +11,7 @@
 <!-- top section -->
   <header class="header">
     <div class="sidebarcontainer">
-      <button class="sidebarcollapse" type="button">
+      <button class="sidebarcollapse" onclick="openNav()" type="button">
           <div class="teamicon"><img src="teamicon.jpg"></div>
           <div class="teamview"><a class= "tv" href="#">TEAM VIEW</a></div>     
       </button>
@@ -30,7 +30,7 @@
   </header>
 
   <!-- Side nav bar -->
-  <main>
+  <main id="main">
     <nav class="nav-body">
       <button class="leadership--active primaryColorbg">
       <div class="leadership-team"><a href="index.html">Leadership</a></div>
@@ -57,11 +57,11 @@
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <ul class="name">Sample Name- Team Lead</ul>
-                <ul class="pic"><img src="Bryan Klein (1).jpg" alt="Bryan" width="200" class="pic-1"></ul>
+                <ul class="pic"><img src="teamviewimages/Bryan Klein (1).jpg" alt="Bryan" width="200" class="pic-1"></ul>
                 <ul class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, vel. Nostrum earum explicabo maiores deleniti labore! At repudiandae pariatur laborum minus, eos dolorem id. Voluptatibus blanditiis modi quae repellat vitae, ipsa possimus</ul>
             </div>
             <div class="flip-card-back">
-              <ul class="pic"><img src="bryan2.JPG" alt="Bryan" width="200" class="pic-1"></ul>
+              <ul class="pic"><img src="teamviewimages/bryan2.JPG" alt="Bryan" width="200" class="pic-1"></ul>
               <ul class="bio">When not at work, Bryan enjoys spending time with family being active outdoors: hiking, yoga, and travelling, and is studying full-stack development.</ul>
             </div> 
           </div>      
@@ -70,6 +70,8 @@
     </section>
 
   </main>
+
+  <script src="main.js"></script>
 
 </body>
 </html>
