@@ -52,7 +52,7 @@ body {
 .teamicon {
   height: 15px;
   width: 15px;
-  margin-bottom: 17px;
+  margin-bottom: 23px;
   justify-self: center;
 }
 
@@ -63,6 +63,7 @@ body {
 .tv {
   letter-spacing: .1rem;
   font-weight: 600;
+
 }
 
 .sidebarcollapse {
@@ -74,14 +75,14 @@ body {
   justify-content: center;
   background-color: rgb(255, 255, 255);
   font-weight: 550;
-  font-size: .8rem12px;
+  font-size: 12px;
   font-style: normal;
   color: #667d88;
   cursor: pointer;
   border: none;
   outline: none;
-  transition: 0.5s;
   overflow-x: hidden;
+  
 }
 
 .bdheader {
