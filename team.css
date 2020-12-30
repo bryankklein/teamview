@@ -41,7 +41,6 @@ body {
 }
 
 .sidebarcontainer {
-  -webkit-box-flex: 1;
   height: 100%;
   display: flex;
   flex: 1 0;
@@ -58,12 +57,11 @@ body {
 }
 
 .teamview {
- margin-right: px;
  justify-self: center;
 }
 
 .tv {
-  letter-spacing: .2rem;
+  letter-spacing: .1rem;
   font-weight: 600;
 }
 
@@ -76,7 +74,7 @@ body {
   justify-content: center;
   background-color: rgb(255, 255, 255);
   font-weight: 550;
-  font-size: .8rem;
+  font-size: .8rem12px;
   font-style: normal;
   color: #667d88;
   cursor: pointer;
@@ -160,7 +158,7 @@ main {
   grid-area: navbar;
   grid-column: 1/2;
   grid-row: 2/3;
-  grid-gap: 5px;
+  grid-gap: 1px;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
   height: 100vh;
