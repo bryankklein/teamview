@@ -178,7 +178,7 @@ main {
   margin: 5px 10px;
   padding: .5rem 1rem;
   font-weight: 550;
-  font-size: .9rem;
+  font-size: 14px;
   font-style: inherit;
   color: #667d88;
   background-color: rgb(255, 255, 255);
@@ -241,7 +241,7 @@ a {
 
 
 .team-member {
-  height: 500px;
+  height: 533px;
   max-width: 425px;
   min-width: 400px;
   margin: 20px;
@@ -264,17 +264,18 @@ a {
   display: grid;
 }
 .pic-1{
-  border-radius: 100px;
+  border-radius: 10px;
   place-self: center;
   box-shadow: 0.1rem 0.1rem 0.6rem 0 rgba(1,2,2,.45);
-}
+  width: 200px;
+   }
 
-.bio{
-  font-size: .65rem;
+.bio-container{
+  font-size: 12px;
   text-align: justify;
   box-sizing: border-box;
-  margin: 10px;
-  padding: 0px 20px;
+  margin: 20px;
+  padding-right: 25px;
 }
 
 /* begin flip card */
